@@ -6,6 +6,7 @@
 trigger:
 - master
 
+
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -26,10 +27,9 @@ steps:
     namespace: 'default'
     command: 'apply'
     arguments: '-f azure-pipelines-3.yml'
+    versionSpec: 'false'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Azure Container Registry'
     azureSubscriptionEndpointForSecrets: 'Visual Studio Enterprise(df6e8b2b-f50c-4057-b295-3f1b73b526a1)'
     azureContainerRegistry: 'containerregistrycicd.azurecr.io'
     secretName: 'testaks'
-    checkLatest: false
-    validate: false
