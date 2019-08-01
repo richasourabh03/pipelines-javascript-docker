@@ -32,3 +32,4 @@ steps:
     azureSubscriptionEndpointForSecrets: 'Visual Studio Enterprise(df6e8b2b-f50c-4057-b295-3f1b73b526a1)'
     azureContainerRegistry: 'containerregistrycicd.azurecr.io'
     secretName: 'testaks'
+    forceUpdate: true
