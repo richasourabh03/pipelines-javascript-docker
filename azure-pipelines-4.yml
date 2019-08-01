@@ -23,6 +23,7 @@ steps:
     azureResourceGroup: 'akscicd'
     kubernetesCluster: 'akscicd'
     useClusterAdmin: true
+    namespace: 'default'
     command: 'apply'
     arguments: '-f azure-pipelines-4.yml'
     secretType: 'dockerRegistry'
