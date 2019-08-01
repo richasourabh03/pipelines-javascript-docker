@@ -23,7 +23,7 @@ steps:
     azureSubscriptionEndpoint: 'Visual Studio Enterprise(df6e8b2b-f50c-4057-b295-3f1b73b526a1)'
     azureResourceGroup: 'akscicd'
     kubernetesCluster: 'akscicd'
-    namespace: 'testaks'
+    namespace: 'default'
     command: 'apply'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Azure Container Registry'
