@@ -5,7 +5,6 @@
 
 trigger:
 - master
-
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -17,3 +16,20 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: Kubernetes@1
+  inputs:
+    connectionType: 'Azure Resource Manager'
+    azureSubscriptionEndpoint: 'Visual Studio Enterprise(df6e8b2b-f50c-4057-b295-3f1b73b526a1)'
+    azureResourceGroup: 'akscicd'
+    kubernetesCluster: 'akscicd'
+    useClusterAdmin: true
+    namespace: 'existing'
+    command: 'apply'
+    arguments: '-f azure-pipelines-4.yml'
+    secretType: 'dockerRegistry'
+    containerRegistryType: 'Azure Container Registry'
+    azureSubscriptionEndpointForSecrets: 'Visual Studio Enterprise(df6e8b2b-f50c-4057-b295-3f1b73b526a1)'
+    azureContainerRegistry: 'containerregistrycicd.azurecr.io'
+    secretName: 'testing'
+    checkLatest: true
+    outputFormat: 'yaml'
