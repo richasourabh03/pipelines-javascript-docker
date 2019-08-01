@@ -17,9 +17,6 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- script: |
-    npm install
-    npm test
 - task: Kubernetes@1
   inputs:
     connectionType: 'Azure Resource Manager'
