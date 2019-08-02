@@ -25,7 +25,7 @@ steps:
     kubernetesCluster: 'akscicd'
     useClusterAdmin: true
     namespace: 'default'
-    command: 'apply'
+    command: 'login'
     arguments: '-f azure-pipelines-4.yml'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Azure Container Registry'
