@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: richasourabhpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: richasourabhpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: richasourabhpipelinesjavascriptdocker 
+          image: containerregistrycicd.azurecr.io/richasourabhpipelinesjavascriptdocker 
+          ports:
+          - containerPort: 8080
